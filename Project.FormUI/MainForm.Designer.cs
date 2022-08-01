@@ -26,22 +26,43 @@
         /// </summary>
         private void InitializeComponent() {
             this.menu_panel = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.categoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.select_button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menu_panel.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menu_panel
             // 
-            this.menu_panel.Controls.Add(this.select_button);
+            this.menu_panel.Controls.Add(this.button1);
+            this.menu_panel.Controls.Add(this.menuStrip1);
             this.menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.menu_panel.Location = new System.Drawing.Point(0, 0);
             this.menu_panel.Name = "menu_panel";
             this.menu_panel.Size = new System.Drawing.Size(800, 44);
             this.menu_panel.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.categoriesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // categoriesToolStripMenuItem
+            // 
+            this.categoriesToolStripMenuItem.Name = "categoriesToolStripMenuItem";
+            this.categoriesToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.categoriesToolStripMenuItem.Text = "Categories";
+            this.categoriesToolStripMenuItem.Click += new System.EventHandler(this.categoriesToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -61,14 +82,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 406);
             this.dataGridView1.TabIndex = 0;
             // 
-            // select_button
+            // button1
             // 
-            this.select_button.Location = new System.Drawing.Point(12, 12);
-            this.select_button.Name = "select_button";
-            this.select_button.Size = new System.Drawing.Size(75, 23);
-            this.select_button.TabIndex = 0;
-            this.select_button.Text = "Verileri Getir";
-            this.select_button.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(225, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // main_Form
             // 
@@ -77,9 +98,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menu_panel);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "main_Form";
             this.Text = "Main Form";
             this.menu_panel.ResumeLayout(false);
+            this.menu_panel.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -89,9 +114,11 @@
         #endregion
 
         private System.Windows.Forms.Panel menu_panel;
-        private System.Windows.Forms.Button select_button;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

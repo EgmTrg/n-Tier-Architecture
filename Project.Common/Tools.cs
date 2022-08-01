@@ -9,13 +9,15 @@ namespace Project.Common
 {
     public static class Tools
     {
+        const string connectionString = "Server=EGEMEN-PC;Database=NORTHWND;Trusted_Connection=True;";
+
         private static SqlConnection _connection;
 
         public static SqlConnection Connection
         {
             get {
                 if (_connection == null) {
-                    _connection = new SqlConnection(ConfigurationManager.ConnectionStrings["NORTHWND"].ConnectionString);
+                    _connection = new SqlConnection(connectionString);
                 }
                 return _connection;
             }
@@ -49,7 +51,8 @@ namespace Project.Common
             catch (Exception ex) {
                 return new Result<List<ET>> {
                     IsSuccess = false,
-                    Message = "Islem Basarisiz! " + ex.Message
+                    Message = "Islem Basarisiz! " + ex.Message,
+                    Data = null
                 };
             }
         }
